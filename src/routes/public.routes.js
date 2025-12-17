@@ -8,4 +8,6 @@ const { authenticate } = require('../middleware/auth'); // We can make it authen
 // Any logged-in user can access this route
 router.get('/loan-packages', authenticate, publicController.getActiveLoanPackages);
 
+router.get('/settings', authenticate, publicController.getPublicSettings);
+
 module.exports = router;
